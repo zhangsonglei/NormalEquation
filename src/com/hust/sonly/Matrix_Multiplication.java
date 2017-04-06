@@ -1,6 +1,9 @@
 package com.hust.sonly;
 
 public class Matrix_Multiplication {
+	/*
+	 * 求两个矩阵的乘积
+	 */
 	public static double[][] matrix_Multiplication(double[][] matrixA, double[][] matrixB) throws Exception {
 		double[][] matrix = new double[matrixA.length][matrixB[0].length];
 		
@@ -16,6 +19,17 @@ public class Matrix_Multiplication {
 				}
 			}
 		}
+		return matrix;
+	}
+	
+	/*
+	 * 求常数与矩阵的乘积
+	 */
+	public static double[][] matrix_ScalarMultiplication(double[][] matrix, double k) throws Exception {
+		for(int i = 0; i < matrix.length; i++)
+			for(int j = 0; j < matrix[0].length; j++)
+				matrix[i][j] *= k;
+		
 		return matrix;
 	}
 }
